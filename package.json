@@ -1,0 +1,14 @@
+{
+  "version": "v0.7.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
+    "docs:deploy": "npm run build && sh ./deploy.sh"
+  },
+  "dependencies": {
+    "vitepress": "^0.22.4"
+  }
+}
