@@ -1,56 +1,104 @@
----
-title: laf.js 云开发介绍
----
+![laf](https://socialify.git.ci/lafjs/laf/image?description=1&descriptionEditable=像写博客一样写函数！&font=Raleway&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark)
 
-## 简介
+<div align="center">
+  <p>
+    <b>像写博客一样写函数！</b>
+  </p>
 
-`laf.js` 是一套开箱即用、完整、开源、为开发者提供的基于 serverless 模式和 js 编程的云开发框架。
+  <p>
+    
+  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/lafjs/laf)
+  [![](https://img.shields.io/docker/pulls/lafyun/system-server)](https://hub.docker.com/r/lafyun/system-server)
+  ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?logo=typescript&logoColor=white)
+  [![Website](https://img.shields.io/website?url=https%3A%2F%2Fdocs.lafyun.com&logo=Postwoman)](https://docs.lafyun.com/)
+  <a href="https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting3@main/uPic/2022-04-22-14-21-MRJH9o.png"><img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E7%BE%A4-2000%2B-brightgreen"></a>
 
-用熟悉的 js，轻松搞定前后台整体业务，前端秒变全栈。
+  </p>
+</div>
 
-> 如果觉得有用，请不吝给个 star 支持。
+## 👀 Laf 是什么📝💨
 
-[![Github stars](https://img.shields.io/github/stars/Maslow/laf.svg)](https://github.com/lafjs/laf)
+`laf.js` 是一套开箱即用、完整、开源、为开发者提供的基于 Serverless 模式和 JS 编程的云开发框架。
 
-## 主要内容
+用熟悉的 JS，轻松搞定前后台整体业务，前端秒变全栈。
 
-- 提供云函数引擎、文件存储、数据访问策略，开箱即用，5 分钟上线应用，前端秒变全栈
-- 前端可使用 [laf-client-sdk](https://github.com/lafjs/laf/tree/main/packages/client-sdk) “直连”数据库，无需与服务端对接口
-- 支持 h5、小程序、Uni-app、Flutter 等客户端环境使用
-- 提供云开发控制台，在线管理云函数、文件、数据库、远程部署、日志，在线编写、调试云函数，全智能提示 IDE
+[`laf.js`](https://github.com/lafjs/laf) 让每个开发团队都可以随时拥有一个自己的云开发平台！
 
-## 初心场景
+可以通过下面的屏幕截图进一步了解 Laf，关于 Laf 更详细的介绍与说明请参阅 [laf.js 云开发文档](https://docs.lafyun.com/guide/)
 
-- 用于快速开发 MVP，专注于客户端业务，极大程度减少服务端开发工作量
-- 自建属于自己可控的云开发环境
+<table>
+  <tr>
+      <td width="50%" align="center"><b>云函数</b></td>
+      <td width="50%" align="center"><b>云存储</b></td>
+  </tr>
+  <tr>
+     <td><img src="https://9b069020-06e3-4949-83d9-992a52ca99fe.lafyun.com/file/laf_preview_screens/ide.png"/></td>
+     <td><img src="https://9b069020-06e3-4949-83d9-992a52ca99fe.lafyun.com/file/laf_preview_screens/files.png"/></td>
+  </tr>
+  <tr>
+      <td width="50%" align="center"><b>云数据库：数据管理</b></td>
+      <td width="50%" align="center"><b>应用列表</b></td>
+  </tr>
+  <tr>
+     <td><img src="https://9b069020-06e3-4949-83d9-992a52ca99fe.lafyun.com/file/laf_preview_screens/collection.png"/></td>
+     <td><img src="https://9b069020-06e3-4949-83d9-992a52ca99fe.lafyun.com/file/laf_preview_screens/apps.png"/></td>
+  </tr>
+</table>
 
-## 谁适合使用 ？
+## 🖥 在线体验
 
-- **云开发用户**
+🎉 [lafyun.com](http://www.lafyun.com) 正式上线！可直接在线体验，[立即创建](http://www.lafyun.com) Laf 云开发应用服务！
 
-  如果你喜欢微信/阿里/UniCloud 云开发的极速体验，但又不想局限于具体平台的限制，那么可以基于 `laf.js` 搭建属于自己的云开发平台；
+开发者可免费在 [lafyun.com](http://www.lafyun.com) 上快速创建自己的应用，不用关心服务器部署和运维工作，立即拥有应用独立域名及 HTTPS 证书，快速上线应用！
 
-  - `laf.js` 也是当前已知的唯一的开源云开发平台，技术选型更自信、风险更可控、场景更易扩展
-  - 自建云开发，可以获取极速的云开发体验，同时没有技术选型时迁移平台的烦恼顾虑
+开发者可以在私有服务器上部署一套 Laf 云开发平台，可方便的将 [lafyun.com](http://www.lafyun.com) 中的应用迁至自己的 Laf 云开发平台中运行！
 
-- **个人开发者、初创创业团队**
+## ✅ 主要功能
 
-  在产品初期基于 `laf.js` 可以极大减少服务端 API 的数量；
 
-  根据我们的实践经验，初期能节约 90% 的服务端 API；
+- 提供云函数引擎、文件存储、数据访问策略、触发器、WebSocket 等能力，开箱即用，5 分钟上线应用，前端秒变全栈。
+- 前端可使用 [laf-client-sdk](https://github.com/lafjs/laf/tree/main/packages/client-sdk) “直连”数据库，无需与服务端对接口。
+- 支持 H5、小程序、Uni-app、Flutter 等客户端环境使用。
+- 提供云开发控制台，在线管理云函数、文件、数据库、远程部署、日志，在线编写、调试云函数，全智能提示 IDE。
 
-  专注于产品业务本身，快速推出最小可用产品(MVP)，快速进行产品、市场验证。
+## 💥 适用场景
 
-- **软件开发商**
+- 快速构建小程序，如电商，企业各类管理系统等SaaS类应用。
+- 用于快速开发 MVP，专注于客户端业务，极大程度减少服务端开发工作量。
+- 自建属于自己可控的云开发平台。
 
-  将无需雇佣 php 或 java 等服务器工程师，开发成本大幅下降；
+## 👨‍💻 适用人群
 
-  开发效率大幅提升、上线和迭代速度大幅提速；
+#### 云开发用户
 
-  可完整交付整个云开发框架源码，私网部署；
+如果你喜欢微信云开发的极速体验，但又不想局限于微信等具体平台的限制，那么可以基于 `Laf` 搭建属于自己的云开发平台。
 
-#### 此致
+- `laf.js` 也是当前已知的唯一的开源云开发平台，技术选型更自信、风险更可控、场景更易扩展；
+- 自建云开发，可以获取极速的云开发体验，同时没有技术选型时迁移平台的烦恼顾虑。
 
-LaF 开发者交流 QQ 群：`603059673`
+#### 个人开发者、初创创业团队
 
-![](https://9b069020-06e3-4949-83d9-992a52ca99fe.lafyun.com/file/laf_preview_screens/ide.png)
+在产品初期基于 `laf.js` 可以极大减少服务端 API 的数量；
+
+根据我们的实践经验，初期能节约 90% 的服务端 API；
+
+专注于产品业务本身，快速推出最小可用产品(MVP)，快速进行产品、市场验证。
+
+#### 软件开发商
+
+将无需雇佣 PHP 或 Java 等服务器工程师，开发成本大幅下降；
+
+开发效率大幅提升、上线和迭代速度大幅提速；
+
+可完整交付整个云开发框架源码，私网部署。
+
+## 🚀 快速开始
+
+[安装教程](./docs/guide/function/install.md)
+
+## 🏘️ 社群
+
++ [微信群](https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting3@main/uPic/2022-04-22-14-21-MRJH9o.png)
++ QQ 群：603059673
+
+先run system-client 在 run app-console

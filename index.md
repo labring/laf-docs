@@ -1,10 +1,11 @@
 ---
 title: laf.js 云开发文档
 home: true
-heroImage: /logo.png
+# heroImage: https://socialify.git.ci/lafjs/laf/image?description=1&descriptionEditable=laf%20%E8%AE%A9%E6%AF%8F%E4%B8%AA%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E9%83%BD%E5%8F%AF%E4%BB%A5%E9%9A%8F%E6%97%B6%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%EF%BC%81&font=Raleway&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark
+heroImage: https://socialify.git.ci/lafjs/laf/image?description=1&descriptionEditable=%E5%83%8F%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E5%86%99%E5%87%BD%E6%95%B0%EF%BC%81&font=Raleway&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark
 heroAlt: Logo image
 heroText: Life is short, you need laf :)
-tagline: 前端变全栈，无需服务端
+tagline: 像写博客一样写函数，随手上线
 actionText: Get Started
 actionLink: /guide/
 features:
