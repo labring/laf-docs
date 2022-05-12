@@ -13,6 +13,10 @@ const NavConfig = [
   {
     text: '更新记录',
     link: 'https://github.com/lafjs/laf/blob/main/CHANGELOG.md'
+  },
+  {
+    text: 'GitHub',
+    link: 'https://github.com/lafjs/laf'
   }
 ]
 
@@ -66,7 +70,7 @@ const GuideSiderbarConfig = [
   },
   {
     text: '示例介绍',
-    link: '/guide/examples/',
+    // link: '/guide/examples/',
     children: [
       {
         text: '开发注册/登录功能',
@@ -111,7 +115,7 @@ const GuideSiderbarConfig = [
     children: [
       {
         text: '架构介绍',
-        link: '/guide/architecture/',
+        link: '/guide/architecture',
       },
     ]
   },
@@ -159,8 +163,8 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.png',
-    repo: 'lafjs/laf',
-    docsRepo: 'lafjs/laf-docs',
+    // repo: 'lafjs/laf',
+    // docsRepo: 'lafjs/laf-docs',
     docsBranch: 'main',
     docsDir: '',
     editLinks: true,

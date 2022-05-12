@@ -18,11 +18,11 @@
 
 ## 👀 `laf` 是什么
 
-- laf 是云开发平台，可以快速的开发应用
-- laf 是一个开源的 BaaS 开发平台（Backend as a Service)
-- laf 是一个开箱即用的 serverless 开发平台
-- laf 是一个集「函数计算」、「数据库」、「对象存储」等于一身的一站式开发平台
-- laf 可以是开源版的腾讯云开发、开源版的 Google Firebase、开源版的 UniCloud
+- `laf` 是云开发平台，可以快速的开发应用
+- `laf` 是一个开源的 BaaS 开发平台（Backend as a Service)
+- `laf` 是一个开箱即用的 serverless 开发平台
+- `laf` 是一个集「函数计算」、「数据库」、「对象存储」等于一身的一站式开发平台
+- `laf` 可以是开源版的腾讯云开发、开源版的 Google Firebase、开源版的 UniCloud
 
 [`laf`](https://github.com/lafjs/laf) 让每个开发团队都可以随时拥有一个自己的云开发平台！
 
