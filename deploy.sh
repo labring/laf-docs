@@ -10,4 +10,6 @@ git commit -m "deploy"
 
 git push -f git@github.com:lafjs/lafjs.github.io.git main
 
+rm -rf .git
+
 cd -
