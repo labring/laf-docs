@@ -1,8 +1,7 @@
 ---
 title: laf.js 云开发文档
 home: true
-# heroImage: https://socialify.git.ci/lafjs/laf/image?description=1&descriptionEditable=laf%20%E8%AE%A9%E6%AF%8F%E4%B8%AA%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E9%83%BD%E5%8F%AF%E4%BB%A5%E9%9A%8F%E6%97%B6%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%EF%BC%81&font=Raleway&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark
-heroImage: https://socialify.git.ci/lafjs/laf/image?description=1&descriptionEditable=%E5%83%8F%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E5%86%99%E5%87%BD%E6%95%B0%EF%BC%81&font=Raleway&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark
+heroImage: https://socialify.git.ci/labring/laf/image?description=1&descriptionEditable=%E5%83%8F%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%81&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark
 heroAlt: Logo image
 heroText: Life is short, you need laf :)
 tagline: 像写博客一样写函数，随手上线
@@ -33,4 +32,4 @@ footer: Server Side Public Licensed | Copyright © 2021-present Maslow | lafyun.
 
 > 开发者可以在私有服务器上部署一套 laf 云开发平台，可方便的将 [lafyun.com](http://www.lafyun.com) 中的应用迁至自己的 laf 云开发平台中运行！
 
-[`laf.js`](https://github.com/lafjs/laf) 让每个开发团队都可以随时拥有一个自己的云开发平台！
+[`laf.js`](https://github.com/labring/laf) 让每个开发团队都可以随时拥有一个自己的云开发平台！
