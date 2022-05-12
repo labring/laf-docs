@@ -1,60 +1,19 @@
 ---
-title: 云存储使用介绍
+title: 云存储(OSS)使用介绍
 ---
 
-## 介绍
+### TODO
 
-前端可使用 [laf-client-sdk](https://github.com/lafjs/laf/tree/main/packages/client-sdk) 上传文件。
+> laf 云存储是基础 MinIO 提供的对象存储服务，文档还在紧张的准备中，将于本月全部上线。
 
-## 文件桶（Bucket）
+> [MinIO](https://min.io/) 是专业的兼容 S3-api 的对象存储服务，laf 提供了完全兼容 MinIO (aws s3-api) 的对象存储服务， 在 laf oss 文档上线之前，开发者完全可参考 MinIO 的文档来使用 laf oss。
 
-Laf 提供基于 `bucket` （文件桶）方式管理的文件存储服务。
 
-> 以下演示皆为 `public` 文件桶中操作。
+### MinIO 文档
 
-## 使用客户端 SDK 上传文件
+开发者可自由选择以下两个 SDK 来操作 laf oss：
 
-SDK 当前默认上传到文件 bucket `public` 中
+- 使用 aws-sdk for javascript 操作云存储示例： https://docs.min.io/docs/how-to-use-aws-sdk-for-javascript-with-minio-server.html
+- 使用 minio sdk for javascript 操作云存储示例： https://docs.min.io/docs/javascript-client-quickstart-guide.html
 
-```js
-// in your upload function
-const inputElement = document.getElementById("fileInput");
-const file = inputElement.files[0];
-
-const ret = await cloud.uploadFile(file, "public");
-console.log(ret);
-```
-
-## 直接基于 URL 上传到 `public` 桶中
-
-```js
-import axios from "axios";
-
-// in your upload function
-const inputElement = document.getElementById("fileInput");
-const file = inputElement.files[0];
-const form = new FormData(); // 创建form对象
-form.append("file", file); // 通过append向form对象添加数据
-
-const base_url = cloud.fileBaseUrl;
-const upload_url = `${base_url}/public`;
-
-const res = await axios({
-  url: upload_url,
-  data: form,
-  headers: {
-    "Content-Type": "multipart/form-data",
-  },
-});
-
-console.log(res.data);
-```
-
-## 获取文件 URL
-
-```js
-const base_url = cloud.fileBaseUrl;
-const file_url = `${base_url}/public/avatar.png'`;
-
-console.log(file_url);
-```
+同时， [MinIO文档](https://docs.min.io/docs/javascript-client-quickstart-guide.html)  还提供了 `Java`  `Python` `Golang` 等多种语言的 SDK 。

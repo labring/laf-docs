@@ -59,9 +59,7 @@ const GuideSiderbarConfig = [
   {
     text: '云存储',
     children: [
-      { text: '云存储简介', link: '/guide/oss/' },
-      { text: '使用说明', link: '/guide/oss/use' },
-      { text: 'STS', link: '/guide/oss/sts' },
+      { text: '云存储简介', link: '/guide/oss/' }
     ]
   },
   {
@@ -124,31 +122,38 @@ const GuideSiderbarConfig = [
     children: [
       {
         text: '志愿者服务小程序',
-        link: '/guide/cases/volunteer-service',
+        // link: '/guide/cases/volunteer-service',
+        link: '/guide/cases/'
       },
       {
         text: 'BytePay 区块链支付平台',
-        link: '/guide/cases/bytepay',
+        // link: '/guide/cases/bytepay',
+        link: '/guide/cases/'
       },
       {
         text: '国牧私家牧场公众号',
-        link: '/guide/cases/guomu-pig',
+        // link: '/guide/cases/guomu-pig',
+        link: '/guide/cases/'
       },
       {
         text: '微草轻课交互式课程',
-        link: '/guide/cases/withdot',
+        // link: '/guide/cases/withdot',
+        link: '/guide/cases/'
       },
       {
         text: '灼灼众包平台',
-        link: '/guide/cases/zhuo-zhuo-zhongbao',
+        // link: '/guide/cases/zhuo-zhuo-zhongbao',
+        link: '/guide/cases/'
       },
       {
         text: '蜗牛学习APP',
-        link: '/guide/cases/xiqin-woniu',
+        // link: '/guide/cases/xiqin-woniu',
+        link: '/guide/cases/'
       },
       {
         text: '律协App',
-        link: '/guide/cases/feiteng-law',
+        // link: '/guide/cases/feiteng-law',
+        link: '/guide/cases/'
       }
     ]
   }
