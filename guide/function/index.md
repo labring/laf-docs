@@ -29,9 +29,15 @@ exports.main = async function (ctx) {
 ### 客户端调用云函数
 
 ```js
+import { Cloud } from 'laf-client-sdk'
+
+const cloud = new Cloud({
+  baseUrl: "https://APPID.lafyun.com",
+  getAccessToken: () => localStorage.getItem('access_token')
+})
+
 const ret = await cloud.invokeFunction("login", {
-  username: "maslow",
-  password: "maslow",
+  username: "maslow"
 });
 
 console.log(ret);
