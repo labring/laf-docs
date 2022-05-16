@@ -6,48 +6,65 @@
 同时，对「微信云开发的接口」设计做了增减和加强，支持联表操作、支持泛型等。
 
 # API Reference
-- [获取数据库的引用](#获取数据库的引用)
-- [获取集合的引用](#获取集合的引用)
-  - [集合 Collection](#集合-collection)
-  - [记录 Record / Document](#记录-record--document)
-  - [查询筛选指令 Query Command](#查询筛选指令-query-command)
-  - [字段更新指令 Update Command](#字段更新指令-update-command)
-- [支持的数据类型](#支持的数据类型)
-- [新增文档](#新增文档)
-- [查询文档](#查询文档)
-  - [添加查询条件](#添加查询条件)
-  - [获取查询数量](#获取查询数量)
-  - [设置记录数量](#设置记录数量)
-  - [设置起始位置](#设置起始位置)
-  - [对结果排序](#对结果排序)
-  - [指定返回字段](#指定返回字段)
-  - [查询指令](#查询指令)
-    - [eq](#eq)
-    - [neq](#neq)
-    - [gt](#gt)
-    - [gte](#gte)
-    - [lt](#lt)
-    - [lte](#lte)
-    - [in](#in)
-    - [nin](#nin)
-    - [and](#and)
-    - [or](#or)
-  - [正则表达式查询](#正则表达式查询)
-    - [db.RegExp](#dbregexp)
-- [删除文档](#删除文档)
-- [更新文档](#更新文档)
-  - [更新指定文档](#更新指定文档)
-  - [更新文档，如果不存在则创建](#更新文档如果不存在则创建)
-  - [批量更新文档](#批量更新文档)
-  - [更新指令](#更新指令)
-    - [set](#set)
-    - [inc](#inc)
-    - [mul](#mul)
-    - [remove](#remove)
-    - [push](#push)
-    - [pop](#pop)
-    - [unshift](#unshift)
-    - [shift](#shift)
+- [API Reference](#api-reference)
+  - [获取数据库的引用](#获取数据库的引用)
+  - [获取集合的引用](#获取集合的引用)
+    - [集合 Collection](#集合-collection)
+    - [记录 Record / Document](#记录-record--document)
+    - [查询筛选指令 Query Command](#查询筛选指令-query-command)
+    - [字段更新指令 Update Command](#字段更新指令-update-command)
+  - [支持的数据类型](#支持的数据类型)
+  - [新增文档](#新增文档)
+  - [查询文档](#查询文档)
+    - [添加查询条件](#添加查询条件)
+    - [获取查询数量](#获取查询数量)
+    - [设置记录数量](#设置记录数量)
+    - [设置起始位置](#设置起始位置)
+    - [对结果排序](#对结果排序)
+    - [指定返回字段](#指定返回字段)
+    - [查询指令](#查询指令)
+      - [eq](#eq)
+      - [neq](#neq)
+      - [gt](#gt)
+      - [gte](#gte)
+      - [lt](#lt)
+      - [lte](#lte)
+      - [in](#in)
+      - [nin](#nin)
+      - [and](#and)
+      - [or](#or)
+    - [正则表达式查询](#正则表达式查询)
+      - [db.RegExp](#dbregexp)
+    - [with 联表查询](#with-联表查询)
+      - [一对多关系查询](#一对多关系查询)
+      - [一对一关系查询](#一对一关系查询)
+    - [lookup 联表查询](#lookup-联表查询)
+  - [删除文档](#删除文档)
+  - [更新文档](#更新文档)
+    - [更新指定文档](#更新指定文档)
+    - [更新文档，如果不存在则创建](#更新文档如果不存在则创建)
+    - [批量更新文档](#批量更新文档)
+    - [更新指令](#更新指令)
+      - [set](#set)
+      - [inc](#inc)
+      - [mul](#mul)
+      - [remove](#remove)
+      - [push](#push)
+      - [pop](#pop)
+      - [unshift](#unshift)
+      - [shift](#shift)
+  - [GEO地理位置](#geo地理位置)
+    - [GEO数据类型](#geo数据类型)
+      - [Point](#point)
+      - [LineString](#linestring)
+      - [Polygon](#polygon)
+      - [MultiPoint](#multipoint)
+      - [MultiLineString](#multilinestring)
+      - [MultiPolygon](#multipolygon)
+    - [GEO操作符](#geo操作符)
+      - [geoNear](#geonear)
+      - [geoWithin](#geowithin)
+      - [geoIntersects](#geointersects)
     
 ## 获取数据库的引用
 
@@ -77,6 +94,7 @@ const collection = db.collection('user');
 |          | orderBy | 排序方式                                                                           |
 |          | limit   | 返回的结果集(文档数量)的限制，有默认值和上限值                                     |
 |          | field   | 指定需要返回的字段                                                                 |
+| 聚合     | aggregate | 聚合操作（已实现，文档待完善）                                                   |
 
 
 查询及更新指令用于在 `where` 中指定字段需满足的条件，指令可通过 `db.command` 对象取得。
@@ -555,9 +573,14 @@ db.collection('articles').where({
 
 ### with 联表查询
 
+with / withOne 联表查询，可以实现查询一个集合时，连同某个字段的相关联记录一同查出（可跨表），比如查询“班级”时连同班级内的“学生”一起查询出来，又比如查询“文章”时连同它的“作者”一并查出等等。
+
+:::info
+with / withOne 联表查询在 sdk 内部是先查询了主表后，再查询子表，然后在本地（云函数或客户端）完成拼接后再传回业务开发者；如果你还没有使用 with 联表查询，推荐使用聚合操作的 [lookup 联表查询](#lookup-联表查询)。
+:::
 
 #### 一对多关系查询
-主要用于「一对多」关系的子查询，可跨库查询，要求用户拥有子表的查询权限
+主要用于「一对多」关系的子查询，可跨表查询，要求用户拥有子表的查询权限
 
 ```js
 const { data } = await db.collection('article')
@@ -590,6 +613,30 @@ console.log(data)
 //  [ { id: 1, name: xxx, author: {...} }  ]
 ```
 
+
+### lookup 联表查询
+
+:::info
+lookup 联表查询并非 `collection` 下的方法！
+
+事实上其为聚合 `aggregate` 下的方法，然而前文提到了 `with 联表查询` 用途与此一致，故在此先做说明，以避免开发者以为 lookup 不得使用，导致额外适配成 with 联表查询的成本。
+:::
+
+用途与 `with 联表查询` 基本一致，同 with 联表查询的示例: 查询 article 集合时，把各记录的 tag 标签一同查出。
+
+```js
+const { data } = await db.collection('article')
+      .aggregate()
+      .lookup({
+        from: "tag",
+        localField: 'id',         // 主表连接键，即 article.id
+        foreignField: 'article_id',   // 子表连接键，即 tag.article_id
+        as: 'tags'          // 查询结果中字段重命名，缺省为子表名
+      })
+      .end()
+
+console.log(data) 
+```
 
 ## 删除文档
 方式1 通过指定文档ID
