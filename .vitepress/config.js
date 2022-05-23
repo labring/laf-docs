@@ -64,7 +64,11 @@ const GuideSiderbarConfig = [
   },
   {
     text: '静态网站托管',
-    link: '/guide/website-hosting/',
+    children: [
+      { text: '静态网站托管简介', link: '/guide/website-hosting/index' },
+      { text: 'Web端部署', link: '/guide/website-hosting/web-example' },
+      { text: 'Cli端部署', link: '/guide/website-hosting/cli-example' },
+    ]
   },
   {
     text: '示例介绍',
