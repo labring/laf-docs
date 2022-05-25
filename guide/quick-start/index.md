@@ -179,10 +179,10 @@ exports.main = async function (ctx) {
   // 业务逻辑处理 判断 订单状态 订单金额
   // 创建sdk
   const ali = new alipay({
-    appId:"",
+    appId:"appid",
     signType: "RSA2",
-    privateKey: "",
-    alipayPublicKey:"",
+    privateKey: "应用私钥",
+    alipayPublicKey:"支付私钥",
     gateway: "https://openapi.alipay.com/gateway.do",//
     });
  const formData = new AlipayFormData()
@@ -242,12 +242,12 @@ exports.main = async function (ctx: any) {
     }).getOne()
   // 实例话 payment  
   const payment = new Payment({
-    appid: "",
-    mchid: "",
+    appid: "公众号ID",
+    mchid: "商户id",
     private_key: getPrivateKey(), //require('fs').readFileSync('*_key.pem证书文件路径').toString()
-    serial_no: "",
-    apiv3_private_key: "",
-    notify_url: "",
+    serial_no: "序列号",
+    apiv3_private_key: "api v3密钥",
+    notify_url: "付退款结果通知的回调地址",
   })
   // 下单
   let result = await payment.native({
