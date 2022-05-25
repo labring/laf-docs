@@ -113,16 +113,6 @@ curl -X POST -H "Content-Type: application/json" -d '{"username": "admin", "pass
 # 用户登陆
 curl -X POST -H "Content-Type: application/json" -d '{"username": "admin", "password": "admin"}' https://APPID.lafyun.com/login
 
-# 发送验证码
-curl -X POST -H "Content-Type: application/json" -d '{"phone": "188****2577", "code": "123456"}' https://APPID.lafyun.com/sendsms
-
-
-# 支付宝支付
-curl -X POST -H "Content-Type: application/json" -d '{"goodsName": "laf", "goodsDetail": "让开发更简单","totalFee":10}' https://APPID.lafyun.com/aliPay
-
-
-# 微信支付
-curl -X POST -H "Content-Type: application/json" -d '{"goodsName": "laf", "goodsDetail": "让开发更简单","totalFee":10}' https://APPID.lafyun.com/wxPay
 
 ```
 

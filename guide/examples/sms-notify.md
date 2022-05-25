@@ -1,7 +1,7 @@
 
 #### 发送验证码云函数
 
-> 同上，创建 `sendsms` 云函数，编写以下代码：
+> 创建 `sendsms` 云函数，添加依赖 @alicloud/dysmsapi20170525，编写以下代码：
 
 ```ts
 
@@ -36,7 +36,7 @@ exports.main = async function (ctx: FunctionContext) {
     let client = Client.createClient(accessKeyId, accessKeySecret);
     let sendSmsRequest = new $Dysmsapi20170525.SendSmsRequest({
       phoneNumbers: phone,
-      signName: "灼灼信息",
+      signName: "短信签名",
       templateCode: "模版id",
       templateParam: `{"code":${code}}`,
     });

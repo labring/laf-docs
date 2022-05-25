@@ -1,6 +1,6 @@
 #### 微信支付云函数
 
-> 同上，创建 `wxPay` 云函数，编写以下代码：
+> 创建 `wxPay` 云函数，添加依赖 wxpay-v3（github链接：https://github.com/yangfuhe/node-wxpay），编写以下代码：
 
 ```ts
 

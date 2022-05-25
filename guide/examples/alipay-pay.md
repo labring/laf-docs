@@ -1,6 +1,6 @@
 #### 支付宝支付云函数
 
-> 同上，创建 `aliPay` 云函数，编写以下代码：
+> 创建 `aliPay` 云函数，添加依赖 alipay-sdk ，编写以下代码：
 
 ```ts
 
@@ -31,12 +31,12 @@ exports.main = async function (ctx) {
         appId:"appid",
         signType: "RSA2",
         privateKey: "应用私钥",
-        alipayPublicKey:"支付私钥",
+        alipayPublicKey:"支付宝公钥",
         gateway: "https://openapi.alipay.com/gateway.do",//
     });
     const formData = new AlipayFormData()
     formData.setMethod("get")
-    formData.addField('notifyUrl', 'https://www.baidu.com')
+    formData.addField('notifyUrl', '回调地址')
     formData.addField("bizContent", {
         subject: orderRecord.subject,
         body: orderRecord.body,
