@@ -1,5 +1,5 @@
 ---
-title: laf.js 云开发文档
+title: laf 云开发文档
 home: true
 heroImage: https://socialify.git.ci/labring/laf/image?description=1&descriptionEditable=%E5%83%8F%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%80%E6%A0%B7%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%81&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark
 heroAlt: Logo image
@@ -32,4 +32,4 @@ footer: Server Side Public Licensed | Copyright © 2021-present Maslow | lafyun.
 
 > 开发者可以在私有服务器上部署一套 laf 云开发平台，可方便的将 [lafyun.com](http://www.lafyun.com) 中的应用迁至自己的 laf 云开发平台中运行！
 
-[`laf.js`](https://github.com/labring/laf) 让每个开发团队都可以随时拥有一个自己的云开发平台！
+[`laf`](https://github.com/labring/laf) 让每个开发团队都可以随时拥有一个自己的云开发平台！

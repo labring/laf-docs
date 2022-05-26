@@ -1,5 +1,5 @@
 {
-  "version": "0.8.0-alpha.4",
+  "version": "0.8.0",
   "private": true,
   "scripts": {
     "start": "npm run dev",
@@ -7,7 +7,7 @@
     "build": "vitepress build",
     "serve": "vitepress serve",
     "docs:deploy": "npm run build && sh ./deploy.sh",
-    "docker-build": "docker build -t lafyun/docs:0.8.0-alpha.4 ."
+    "docker-build": "docker build -t lafyun/docs:0.8.0 ."
   },
   "dependencies": {
     "vitepress": "^0.22.4"

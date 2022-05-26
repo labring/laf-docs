@@ -12,11 +12,11 @@ const NavConfig = [
   { text: 'lafyun.com', link: 'https://www.lafyun.com/' },
   {
     text: '更新记录',
-    link: 'https://github.com/lafjs/laf/blob/main/CHANGELOG.md'
+    link: 'https://github.com/labring/laf/blob/main/CHANGELOG.md'
   },
   {
     text: 'GitHub',
-    link: 'https://github.com/lafjs/laf'
+    link: 'https://github.com/labring/laf'
   }
 ]
 
@@ -73,13 +73,10 @@ const GuideSiderbarConfig = [
     text: '示例介绍',
     // link: '/guide/examples/',
     children: [
+
       {
-        text: '开发注册/登录功能',
-        link: '/guide/examples/3min-login',
-      },
-      {
-        text: '开发一个短信通知服务',
-        link: '/guide/examples/sms-notify',
+        text: '阿里云短信发送函数',
+        link: '/guide/examples/aliyun-sms',
       },
       {
         text: '开发一个企业微信群通知服务',
@@ -171,8 +168,8 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.png',
-    // repo: 'lafjs/laf',
-    // docsRepo: 'lafjs/laf-docs',
+    // repo: 'labring/laf',
+    // docsRepo: 'labring/laf-docs',
     docsBranch: 'main',
     docsDir: '',
     editLinks: true,
