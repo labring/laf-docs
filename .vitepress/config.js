@@ -33,10 +33,6 @@ const GuideSiderbarConfig = [
     link: '/guide/quick-start/',
   },
   {
-    text: '私有化部署',
-    link: '/guide/deploy/',
-  },
-  {
     text: '云函数',
     children: [
       { text: '云函数简介', link: '/guide/function/' },
@@ -163,7 +159,10 @@ const GuideSiderbarConfig = [
   //     }
   //   ]
   // }
-
+  {
+    text: '私有化部署',
+    link: '/guide/deploy/',
+  }
 ]
 
 

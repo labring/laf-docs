@@ -55,5 +55,6 @@ const res = await s3.send(cmd)
 console.log(res)
 ```
 
-
+::: info
 这里我们使用 `@aws-sdk/client-s3` 库，实现文件上传，你可以使用任何兼容 aws s3 接口的 SDK 来替代，如  [minio js sdk](https://docs.min.io/docs/javascript-client-quickstart-guide.html) 
+:::

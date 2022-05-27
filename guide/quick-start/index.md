@@ -4,7 +4,9 @@ title: 快速开始
 
 ## 快速开始
 
-> 我们将在 [lafyun.com](https://www.lafyun.com) 上，通过开发一个简单的「用户登录/注册」的功能，快速体验 `laf` 云开发。
+::: info
+我们将在 [lafyun.com](https://www.lafyun.com) 上，通过开发一个简单的「用户登录/注册」的功能，快速体验 `laf` 云开发。
+:::
 
 ### 准备工作
   
@@ -14,13 +16,20 @@ title: 快速开始
 
 ### 编写云函数
 
-本教程会编写两个云函数:`register` 处理注册请求，`login` 处理登录请求
+本教程会编写两个云函数: 
+- `register` 处理注册请求
+- `login` 处理登录请求.
+
+
+
 
 #### 用户注册云函数
   
-> 在「云函数」管理页面，点击 「新建函数」，创建注册云函数 `register`，
+::: info
+在「云函数」管理页面，点击 「新建函数」，创建注册云函数 `register`，
 
-> 点击 `register` 函数右侧的 「开发」按钮，进入 WebIDE，编写以下代码：
+点击 `register` 函数右侧的 「开发」按钮，进入 WebIDE，编写以下代码：
+:::
 
 ```ts
 import cloud from '@/cloud-sdk'
@@ -54,9 +63,9 @@ exports.main = async function (ctx: FunctionContext) {
   return { data: id }
 }
 ```
-
-> 点击右上角的 「显示调试面板」(Ctrl/Cmd + B) 即可调试运行，点击 「保存」 & 「发布」 函数即发布上线！
-
+::: info
+点击右上角的 「显示调试面板」(Ctrl/Cmd + B) 即可调试运行，点击 「保存」 & 「发布」 函数即发布上线！
+:::
 
 #### 用户登录云函数
 
