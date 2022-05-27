@@ -59,7 +59,9 @@ const GuideSiderbarConfig = [
   {
     text: '云存储',
     children: [
-      { text: '云存储简介', link: '/guide/oss/' }
+      { text: '云存储简介', link: '/guide/oss/' },
+      { text: '生成云存储临时令牌(STS)', link: '/guide/oss/get-sts' },
+      { text: '前端使用 STS 令牌上传文件', link: '/guide/oss/use-sts-in-client' },
     ]
   },
   {
@@ -78,14 +80,14 @@ const GuideSiderbarConfig = [
         text: '阿里云短信发送函数',
         link: '/guide/examples/aliyun-sms',
       },
-      {
-        text: '开发一个企业微信群通知服务',
-        link: '/guide/examples/wechat-notify',
-      },
-      {
-        text: '实现网站健康状态拨测服务',
-        link: '/guide/examples/health-check'
-      },
+      // {
+      //   text: '开发一个企业微信群通知服务',
+      //   link: '/guide/examples/wechat-notify',
+      // },
+      // {
+      //   text: '实现网站健康状态拨测服务',
+      //   link: '/guide/examples/health-check'
+      // },
       {
         text: '实现微信支付功能',
         link: '/guide/examples/wechat-pay'
@@ -98,65 +100,65 @@ const GuideSiderbarConfig = [
         text: '使用 WebSocket 长连接',
         link: '/guide/examples/websocket'
       },
-      {
-        text: '区块链：调用 Polkadot 交易接口',
-        link: '/guide/examples/polkadot-transaction'
-      },
-      {
-        text: '使用 GitHub Actions 部署个人博客',
-        link: '/guide/examples/github-actions-blog'
-      }
+      // {
+      //   text: '区块链：调用 Polkadot 交易接口',
+      //   link: '/guide/examples/polkadot-transaction'
+      // },
+      // {
+      //   text: '使用 GitHub Actions 部署个人博客',
+      //   link: '/guide/examples/github-actions-blog'
+      // }
     ]
   },
-  {
-    text: '原理介绍',
-    children: [
-      {
-        text: '架构介绍',
-        link: '/guide/architecture',
-      },
-    ]
-  },
-  {
-    text: '使用案例',
-    children: [
-      {
-        text: '志愿者服务小程序',
-        // link: '/guide/cases/volunteer-service',
-        link: '/guide/cases/'
-      },
-      {
-        text: 'BytePay 区块链支付平台',
-        // link: '/guide/cases/bytepay',
-        link: '/guide/cases/'
-      },
-      {
-        text: '国牧私家牧场公众号',
-        // link: '/guide/cases/guomu-pig',
-        link: '/guide/cases/'
-      },
-      {
-        text: '微草轻课交互式课程',
-        // link: '/guide/cases/withdot',
-        link: '/guide/cases/'
-      },
-      {
-        text: '灼灼众包平台',
-        // link: '/guide/cases/zhuo-zhuo-zhongbao',
-        link: '/guide/cases/'
-      },
-      {
-        text: '蜗牛学习APP',
-        // link: '/guide/cases/xiqin-woniu',
-        link: '/guide/cases/'
-      },
-      {
-        text: '律协App',
-        // link: '/guide/cases/feiteng-law',
-        link: '/guide/cases/'
-      }
-    ]
-  }
+  // {
+  //   text: '原理介绍',
+  //   children: [
+  //     {
+  //       text: '架构介绍',
+  //       link: '/guide/architecture',
+  //     },
+  //   ]
+  // },
+  // {
+  //   text: '使用案例',
+  //   children: [
+  //     {
+  //       text: '志愿者服务小程序',
+  //       // link: '/guide/cases/volunteer-service',
+  //       link: '/guide/cases/'
+  //     },
+  //     {
+  //       text: 'BytePay 区块链支付平台',
+  //       // link: '/guide/cases/bytepay',
+  //       link: '/guide/cases/'
+  //     },
+  //     {
+  //       text: '国牧私家牧场公众号',
+  //       // link: '/guide/cases/guomu-pig',
+  //       link: '/guide/cases/'
+  //     },
+  //     {
+  //       text: '微草轻课交互式课程',
+  //       // link: '/guide/cases/withdot',
+  //       link: '/guide/cases/'
+  //     },
+  //     {
+  //       text: '灼灼众包平台',
+  //       // link: '/guide/cases/zhuo-zhuo-zhongbao',
+  //       link: '/guide/cases/'
+  //     },
+  //     {
+  //       text: '蜗牛学习APP',
+  //       // link: '/guide/cases/xiqin-woniu',
+  //       link: '/guide/cases/'
+  //     },
+  //     {
+  //       text: '律协App',
+  //       // link: '/guide/cases/feiteng-law',
+  //       link: '/guide/cases/'
+  //     }
+  //   ]
+  // }
 
 ]
 

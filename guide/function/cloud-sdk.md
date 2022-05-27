@@ -17,12 +17,12 @@ import cloud from "@/cloud-sdk";
 exports.main = async function (ctx) {
   const { username } = ctx.body;
   // 数据库操作
-  const db = cloud.database();
-  const ret = await db.collection("users").where({ username }).get();
+  const db = cloud.database()
+  const ret = await db.collection("users").where({ username }).get()
 
-  console.log(ret);
-  return ret.data;
-};
+  console.log(ret)
+  return ret.data
+}
 ```
 
 #### HTTP 请求
@@ -38,34 +38,10 @@ exports.main = async function (ctx) {
   const ret = await cloud.fetch({
     url: "http://www.baidu.com/",
     method: "post",
-  });
+  })
 
-  console.log(ret.data);
-  return ret.data;
-};
-```
-
-#### 文件操作
-
-虽然 `laf.js` 内置提供了文件上传与下载接口，但云函数中也支持文件操作，以便开发者更灵活的实现自己的业务逻辑。
-
-```ts
-import cloud from "@/cloud-sdk";
-
-exports.main = async function (ctx) {
-  if (!ctx.files?.length) {
-    return "no file uploaded";
-  }
-
-  const file = ctx.files[0];
-  const storage = cloud.storage("public");
-  const saved = await storage.save(file.path, file.filename, {
-    contentType: file.mimetype,
-    original_name: file.originalname,
-    // ... other metadatas
-  });
-
-  return saved.toString();
+  console.log(ret.data)
+  return ret.data
 };
 ```
 
@@ -120,11 +96,7 @@ export interface CloudSdkInterface {
    * 发送 HTTP 请求，实为 Axios 实例，使用可直接参考 axios 文档
    */
   fetch: AxiosStatic;
-  /**
-   * 获取一个文件存储管理器
-   * @param bucket  文件 Bucket 名字，默认为 'public'
-   */
-  storage(bucket?: string): FileStorageInterface;
+
   /**
    * 获取 less api database ORM 实例
    */
